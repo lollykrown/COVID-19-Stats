@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cordi"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CountriesTableActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/colorPrimary"
+            android:text="COVID-19 stats by Country"
+            android:textSize="18sp"
+            android:layout_marginLeft="8dp" />
+
+        <TextView
+            android:id="@+id/updated"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_gravity="end"
+            app:fontFamily="@font/nunito_extralight"
+            android:textColor="#858383"
+            tools:text="12/3/2020"
+            android:layout_marginRight="8dp" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:paddingBottom="20dp">
+
+    <LinearLayout
+        android:id="@+id/table"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/table"
+            android:text="Country"
+            android:layout_width="160dp"
+            android:layout_height="60dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="#ffffff"
+            android:background="@drawable/content_header"
+            android:textStyle="bold"/>
+        <TextView
+            style="@style/table"
+            android:text="Total Cases" />
+        <TextView
+            style="@style/table"
+            android:text="New Cases"/>
+        <TextView
+            style="@style/table"
+            android:text="Total Deaths" />
+        <TextView
+            style="@style/table"
+            android:text="New Deaths" />
+        <TextView
+            style="@style/table"
+            android:text="Total/Recovered"/>
+        <TextView
+            style="@style/table"
+            android:text="Serious/Critical" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/tableList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

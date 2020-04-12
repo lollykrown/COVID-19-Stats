@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/snack"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#9FBECA"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingEnd="8dp"
+            android:paddingStart="8dp"
+            android:paddingBottom="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="COVID-19 BY THE NUMBERS"
+                    android:textColor="#003896"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:layout_marginBottom="8dp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:background="#003896"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/total_cases"
+                        style="@style/countries"
+                        android:textSize="60dp"
+                        tools:text="145,870" />
+
+                    <TextView
+                        app:fontFamily="@font/nunito_extralight"
+                        android:text=" Confirmed cases worldwide"
+                        style="@style/countries"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/new_deaths"
+                        style="@style/countries"
+                        android:layout_marginBottom="4dp"
+                        android:background="@drawable/bg3"
+                        app:fontFamily="@font/nunito_extralight"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        tools:text="5,438" />
+
+                    <TextView
+                        android:id="@+id/total_deaths"
+                        style="@style/countries"
+                        android:layout_marginBottom="4dp"
+                        android:background="#EF4009"
+                        app:fontFamily="@font/nunito_extralight"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        tools:text="5,438" />
+
+                    <TextView
+                        android:id="@+id/total_recovered"
+                        style="@style/countries"
+                        app:fontFamily="@font/nunito_extralight"
+                        android:layout_marginBottom="4dp"
+                        android:background="#01790D"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        tools:text="5,438" />
+
+                    <TextView
+                        android:id="@+id/new_cases"
+                        style="@style/countries"
+                        app:fontFamily="@font/nunito_extralight"
+                        android:background="#355272"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        tools:text="5,438" />
+
+                    <TextView
+                        android:id="@+id/last_updated"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginEnd="8dp"
+                        app:fontFamily="@font/nunito_extralight"
+                        android:textColor="#858383"
+                        tools:text="12/3/2020"
+                        android:layout_marginRight="8dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="8dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                app:fontFamily="@font/nunito_extralight"
+                android:layout_gravity="center"
+                android:focusable="true"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:elevation="8dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:padding="12dp"
+                card_view:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/covid"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="4dp">
+
+                        <TextView
+                            android:id="@+id/upcoming_events"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:textColor="#ffffff"
+                            android:textStyle="bold"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="8dp"
+                            android:text="Cases by Countries"
+                            android:layout_marginLeft="8dp"
+                            android:layout_alignParentLeft="true" />
+
+                        <ImageView
+                            android:id="@+id/ev_arrow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="4dp"
+                            android:src="@drawable/arrow"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="4dp" />
+                    </RelativeLayout>
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv"
+                            android:layout_marginStart="8dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="8dp" />
+
+                    </FrameLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="4dp"
+        app:backgroundTint="@color/colorAccent"
+        app:iconTint="#ffffff"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        app:strokeColor="@color/colorPrimary"
+        app:strokeWidth="4dp"
+        android:text="Countries Tables..."
+        android:layout_marginRight="8dp" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
