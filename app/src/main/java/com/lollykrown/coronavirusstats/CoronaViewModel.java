@@ -35,7 +35,7 @@ public class CoronaViewModel extends AndroidViewModel {
     private String stats = "https://coronavirus-monitor.p.rapidapi.com/coronavirus/worldstat.php";
     private String byCountry = "https://coronavirus-monitor.p.rapidapi.com/coronavirus/cases_by_country.php";
     private String countryTotal = "https://coronavirus-monitor.p.rapidapi.com/coronavirus/affected.php";
-    private String API_KEY = "000d3c92ddmsh6004d289f7b3a66p197932jsn0b72061aa98a";
+    private String API_KEY = "###";
 
 
     private CoronaRepository mRepository;
